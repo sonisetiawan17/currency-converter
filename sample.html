@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="img/exchange.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Box Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+      integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="card">
+          <div class="card_content">
+            <div class="card_title">
+              <img src="img/exchange-rate.png" alt="Currency" />
+              <p>Currency Converter</p>
+            </div>
+            <form>
+              <div class="form_input">
+                <label>Amount</label>
+                <input type="text" value="1" />
+              </div>
+
+              <div class="form_input">
+                <label>From</label>
+                <select
+                  class="js-example-basic-single"
+                  style="padding: 20px"
+                ></select>
+              </div>
+
+              <div class="exchange_btn">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </div>
+
+              <div class="form_input">
+                <label>To</label>
+                <select></select>
+              </div>
+            </form>
+            <div class="convert">
+              <p>1 USD = 14.000 IDR</p>
+            </div>
+            <div class="convert_btn">
+              <button>Convert</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.js-example-basic-single').select2();
+      });
+    </script>
+
+    <script src="script.js" type="module"></script>
+    <script src="countryList.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  </body>
+</html>
